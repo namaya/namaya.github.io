@@ -26,7 +26,9 @@
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
-        ><span class="navbar-toggler-icon"></span></button>
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div id="navbarNav" class="collapse navbar-collapse">
           <ul class="navbar-nav">
             <li class="nav-item">
@@ -47,33 +49,66 @@
       </div>
     </nav>
     <div id="title" class="title-background">
-      <div class="mask d-flex flex-column justify-content-center align-items-center text-center h-100" style="background-color: rgba(0, 0, 0, 0.5);">
-        <img class="img-thumbnail rounded-circle headshot" src="assets/images/portrait.jpeg" alt="My headshot"></a>
+      <div
+        class="mask d-flex flex-column justify-content-center align-items-center text-center h-100"
+        style="background-color: rgba(0, 0, 0, 0.5)"
+      >
+        <img
+          class="img-thumbnail rounded-circle headshot"
+          src="assets/images/portrait.jpeg"
+          alt="My headshot"
+        />
         <h1 class="display-1 text-light">Nicholas Amaya</h1>
-        <h2 class="display-6 text-muted" data-bs-theme="dark">AI Engineer - Grad Student - Lifelong Learner</h2>
+        <h2 class="display-6 text-muted" data-bs-theme="dark">
+          AI Engineer - Grad Student - Lifelong Learner
+        </h2>
       </div>
     </div>
-    <div id="about" class="d-flex vh-100 justify-content-center">
-      <div class="row d-flex h-100 justify-content-center align-items-center">
-        <div class="col d-flex flex-column gap-3">
-          <div class="row">
-            <img class="img-thumbnail rounded-circle" src="assets/images/portrait2.jpeg" alt="Another portrait"></a>
+    <div id="about" class="container">
+      <div class="row vh-100 align-items-center justify-content-center">
+        <div class="col">
+          <div class="row justify-content-center">
+            <img
+              class="img-thumbnail rounded-circle headshot-2"
+              src="assets/images/portrait2.jpeg"
+              alt="Another portrait"
+            />
           </div>
-          <div class="d-flex flex-row justify-content-center w-100 gap-3">
-            <div>
-              <a href="https://www.linkedin.com/in/namaya" title="My LinkedIn">
-                <img src="assets/images/linkedin.png" alt="linkedin icon" width="32" height="32" />
-              </a>
-            </div>
-            <div>
-              <a href="https://twitter.com/nickamaya_" title="My Twitter">
-                <img src="assets/images/x-logo.png" alt="x icon" width="32" height="32" />
-              </a>
-            </div>
-            <div>
-              <a href="https://github.com/namaya" title="My GitHub">
-                <img src="assets/images/github.png" alt="github icon" width="32" height="32" />
-              </a>
+          <div class="row">
+            <div class="col text-center gy-4">
+              <span>
+                <a
+                  href="https://www.linkedin.com/in/namaya"
+                  title="My LinkedIn"
+                >
+                  <img
+                    src="assets/images/linkedin.png"
+                    alt="linkedin icon"
+                    width="32"
+                    height="32"
+                  />
+                </a>
+              </span>
+              <span class="p-3">
+                <a href="https://twitter.com/nickamaya_" title="My Twitter">
+                  <img
+                    src="assets/images/x-logo.png"
+                    alt="x icon"
+                    width="32"
+                    height="32"
+                  />
+                </a>
+              </span>
+              <span>
+                <a href="https://github.com/namaya" title="My GitHub">
+                  <img
+                    src="assets/images/github.png"
+                    alt="github icon"
+                    width="32"
+                    height="32"
+                  />
+                </a>
+              </span>
             </div>
           </div>
         </div>
@@ -84,7 +119,7 @@
           </div>
           <div class="row">
             <p>
-              I'm a AI engineer with an interest in generative AI. My interests
+              I'm a AI engineer with an passion for generative AI. My interests
               include language modeling, computer vision, system design, and
               algorithms.
             </p>
@@ -100,10 +135,200 @@
         </div>
       </div>
     </div>
-    <div id="skills">These are my skills</div>
-    <div id="projects">Projects</div>
+    <div id="projects" class="vh-100">
+      <div
+        id="project-list"
+        class="d-flex flex-row justify-content-around"
+      ></div>
+      <!-- <h1>Projects</h1>
+    <div>
+        <ol>
+            <li>
+                <h3>LC-3b</h3>
+                <div>
+                    <h4>Date Created</h4>
+                    <p>January 26, 2017</p>
+                </div>
+                <div>
+                    <h4>Description</h4>
+                    <p>
+                        A virtual micro-architecture that implements the LC-3b ISA including support 
+                        for hardware interrupts, virtual memory, and intruction pipelining.
+                    </p>
+                </div>
+                <div>   
+                    <h4>Applied Skills</h4>
+                    <h5>Concepts</h5>
+                    <ul>
+                        <li>Virtual Memory Schemes</li>
+                        <li>Pipelining</li>
+                        <li></li>
+                    </ul>
+                    <h5>Tools</h5>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Demonstration</h4>
+                    <p>Video...</p>
+                </div>
+                <div>
+                    <h4>Contributors</h4>
+                    <ul>
+                        <li>Nicholas Amaya</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h3>Barebones Pok&eacute;mon FireRed Clone</h3>
+                <div>
+                    <h4>Date Created</h4>
+                    <p>April 20, 2016</p>
+                </div>
+                <div>
+                    <h4>Description</h4>
+                    <p>
+                        In this project, I, with the help of Ben Richards, designed and implemented a 
+                        Pok&eacute;mon FireRed clone on an embedded processor with a small LED monitor. I designed
+                        and built the external game controller as well as the Pok&eacute;Battle interface.
+                    </p>
+                    <p>
+                        We ran into a couple of challenges when implementing our clone. The biggest being the memory 
+                        restrictions on the TM4C. The TM4C only had 256 KB of disk memory. An average sprite sheet
+                        that we used to draw our characters took up somewhere around 30-50 KB of memory. This meant
+                        we could only use 5-8 sprite sheets to represent all of the characters, pok&eacute;mon, items,
+                        environments, etc. in our game.
+                    </p>
+                    <p>
+                        To comply with this constraint, we used vector graphics when possible. This allowed us to focus
+                        our sprites on the pok&eacute;mon in the game...
+                    </p>
+                </div>
+                <div>   
+                    <h4>Applied Skills</h4>
+                    <h5>Concepts</h5>
+                    <ul>
+                        <li>Moore Machine (Finite State Machine)</li>
+                        <li>Class Hierarchies (OOP)</li>
+                        <li>Embedded Systems Programming</li>
+                        <li>The Game Loop Design Pattern</li> 
+                        <li>C Function Pointers</li>
+                        <li>Analog to Digital Converters and Digital to Analog Converters</li>
+                    </ul>
+                    <h5>Tools</h5>
+                    <ul>
+                        <li>C</li>
+                        <li>TM4C123x Microcontroller</li>
+                        <li>Keil &mu;Vision 4</li>
+                        <li>Adafruit ST7735 LCD</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Demonstration</h4>
+                    <p>Video...</p>
+                </div>
+            </li>
+            
+            <li>
+                <h3>Critters</h3>
+            </li>
+            <li>
+                <h3>Slack Clone</h3>
+            </li>
+            <li>
+                <h3>gitSwole</h3>
+            </li>
+            <li>
+                <h3>Fault-Tolerant Key-Value Store</h3>
+            </li>
+            <li>
+                <h3>Software-Defined Radio</h3>
+            </li>
+            <li>
+                <h3>EE312: A2: Manipulating Numeric Data</h3> 
+                <div>
+                    <h4>Skills Applied</h4>
+                    <h5>Concepts</h5>
+                    <ul>
+                        <li>Test-Driven Development</li>
+                        <li>Template Method Pattern</li>
+                    </ul>
+                    <h5>Tools</h5>
+                    <ul>
+                        <li>C</li>
+                        <li>minunit unit testing framework</li>
+                        <li>GNU Make</li>
+                        <li>gcc</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contributors</h4>
+                    <ul>
+                        <li>Nicholas Amaya</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h3>Autonomous Rover</h3>
+                <div>
+                    <h4>Date Created</h4>
+                    <p>November 16, 2015</p>
+                </div>
+                <div>
+                    <h4>Description</h4>
+                    <p>
+                        A level 3 autonomous toy vehicle that follows lines and avoids walls.
+                    </p>
+                    <p>
+                      I designed and built the autonomous rover with the help of my team. I was responsible for configuring
+                      the hardware and programming the software.
+                    </p>
+                </div>
+                <div>   
+                    <h4>Skills Applied</h4>
+                    <h5>Concepts</h5>
+                    <ul>
+                        <li>Embedded Systems Programming</li>
+                        <li>Programmable Logic Arrays</li>
+                        <li>Boolean Logic Tables</li>
+                    </ul>
+                    <h5>Tools</h5>
+                    <ul>
+                        <li>National Instruments Labview</li>
+                        <li>National Instruments myDAQ</li>
+                        <li>Tamiya Tracked Vehicle Chassis Kit</li>
+                        <li>SHARP GP2Y0A02YK0F Distance Measuring Sensor Unit</li>
+                        <li>Adafruit Photoresistor</li>
+                        <li>L293/L293D Quadruple Half-H Driver (H-Bridge IC)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Demonstration</h4>
+                    <p>Video...</p>
+                </div>
+                <div>
+                    <h4>Contributors</h4>
+                    <ul>
+                        <li>Nicholas Amaya</li>
+                        <li>Mark Sand</li>
+                        <li>Kevin Perilla</li>
+                        <li>Hannah Maxwell</li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+    </div> -->
+    </div>
     <div id="blog">Blog</div>
     <div id="timeline">Work experience..</div>
+    <!-- Run JS scripts after HTML blocks have rendered. -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/projects.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
