@@ -4,6 +4,11 @@
     height: 225px;
 }
 
+.headshot-2 {
+    width: 250px;
+    height: 200px;
+}
+
 .title-background {
     background-image: url("../images/austin-texas-skyline.jpeg");
     /* background-image: url("https://mdbootstrap.com/img/new/fluid/city/018.jpg"); */
