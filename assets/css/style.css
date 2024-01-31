@@ -1,0 +1,15 @@
+
+.headshot {
+    width: 200px;
+    height: 225px;
+}
+
+.title-background {
+    background-image: url("../images/austin-texas-skyline.jpeg");
+    /* background-image: url("https://mdbootstrap.com/img/new/fluid/city/018.jpg"); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+}
