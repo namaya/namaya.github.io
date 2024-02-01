@@ -100,7 +100,7 @@ projects
   .forEach((project) => {
     $("#project-list").append(`
       <div class="col">
-        <div class="card" style="width: 20rem;">
+        <div class="card shadow" style="width: 20rem;">
           <img src="${project.thumbnail}" class="card-img-top w-100" alt="..." style="height: 10rem;">
           <div class="card-body">
             <h5 class="card-title">${project.title}</h5>
