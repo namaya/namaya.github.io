@@ -7,20 +7,23 @@ const projects = [
     skills: [
       "C",
       "Embedded Programming",
-      "Finite State Machines",
-      "Analog-to-Digital Converters (ADC)",
-      "Digital-to-Analog Converters (DAC)",
-      "TM4C123x Microcontroller",
-      "Keil &mu;Vision 4 IDE",
-      "Adafruit ST7735 LCD",
+      "Vector Graphics",
+      // "Finite State Machines",
+      // "Analog-to-Digital Converters (ADC)",
+      // "Digital-to-Analog Converters (DAC)",
+      // "TM4C123x Microcontroller",
+      // "Keil &mu;Vision 4 IDE",
+      // "Adafruit ST7735 LCD",
     ],
+    thumbnail: "assets/images/thumbnails/pokemon.png",
   },
   {
     title: "LC-3b",
     dateCreated: new Date("2017-01-26"),
     summary:
       "A virtual micro-architecture that implements the LC-3b ISA including support for hardware interrupts, virtual memory, and instruction pipelining.",
-    skills: ["Computer Architecture", "C", "Assembly"],
+    skills: ["Computer Architecture", "C"],
+    thumbnail: "assets/images/thumbnails/lc-3b.png",
   },
 ];
 projects.sort((a, b) => b.dateCreated - a.dateCreated); // sort by date created DESC (most recent first)
@@ -32,16 +35,21 @@ projects
   })
   .forEach((project) => {
     $("#project-list").append(`
-      <div>
-        <h1>${project.title}</h1>
-        <p>${project.summary}</p>
-        <ul id="${project.id}-skills" class="list-group list-group-horizontal-sm"></ul>
+      <div class="col">
+        <div class="card" style="width: 20rem;">
+          <img src="${project.thumbnail}" class="card-img-top img-thumbnail" alt="..." style="height: 10rem; width: 20rem;">
+          <div class="card-body">
+            <h5 class="card-title">${project.title}</h5>
+            <div id="${project.id}-skills" class="d-inline-flex flex-wrap"></div>
+            <p class="card-text">${project.summary}</p>
+          </div>
+        </div>
       </div>
     `);
 
     project.skills.forEach((skill) =>
       $(`#${project.id}-skills`).append(
-        `<li class="list-group-item">${skill}</li>`
+        `<small class="text-nowrap px-1">${skill}</small>`
       )
     );
   });
