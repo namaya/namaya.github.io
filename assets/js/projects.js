@@ -46,6 +46,8 @@ const skills = {
   "Embedded Programming": {},
   "Vector Graphics": {},
   "Computer Architecture": {},
+  Robotics: {},
+  LabView: {},
 };
 
 for (const [color, value] of Object.entries(skills)) {
@@ -62,6 +64,22 @@ const projects = [
       "A port of the Gameboy Advance game 'Pok&eacute;mon FireRed' for a Texas Instruments' TM4C microcontroller.",
     skills: ["Embedded Programming", "Vector Graphics", "C"],
     thumbnail: "assets/images/thumbnails/pokemon.png",
+  },
+  // {
+  //   title: "Embedded Pokemon FireRed-1",
+  //   dateCreated: new Date("2016-04-20"),
+  //   summary:
+  //     "A port of the Gameboy Advance game 'Pok&eacute;mon FireRed' for a Texas Instruments' TM4C microcontroller.",
+  //   skills: ["Embedded Programming", "Vector Graphics", "C"],
+  //   thumbnail: "assets/images/thumbnails/pokemon.png",
+  // },
+  {
+    title: "Toy Self-Driving Vehicle",
+    dateCreated: new Date("2015-11-16"),
+    summary:
+      " A level 3 autonomous toy vehicle that follows lines and avoids walls.",
+    skills: ["Embedded Programming", "Robotics", "LabView"],
+    thumbnail: "assets/images/thumbnails/rover.png",
   },
   {
     title: "LC-3b",
