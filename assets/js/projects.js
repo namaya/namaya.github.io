@@ -62,6 +62,17 @@ const projects = [
     dateCreated: new Date("2016-04-20"),
     summary:
       "A port of the Gameboy Advance game 'Pok&eacute;mon FireRed' for a Texas Instruments' TM4C microcontroller.",
+    // about: marked.parse(`
+    //     I worked on this project with one other contributor, Ben Richards. We were tasked with creating a game
+    //     that would run on a Texas Instruments' TM4C microcontroller.
+
+    //     We chose to port the Gameboy Advance game
+    //     'Pok&eacute;mon FireRed' to the microcontroller. We implemented the game's graphics using vector graphics
+    //     and the game's logic using C.
+
+    //     The game was played on a 128x128 pixel screen and was controlled using a
+    //     4x4 keypad. The game was a success and was demonstrated at the end of the semester.
+    //   `),
     skills: ["Embedded Programming", "Vector Graphics", "C"],
     thumbnail: "assets/images/thumbnails/pokemon.png",
   },
@@ -98,14 +109,33 @@ projects
     return project;
   })
   .forEach((project) => {
+    ``;
     $("#project-list").append(`
       <div class="col">
-        <div class="card shadow" style="width: 20rem;">
+        <div class="card shadow hover-zoom" style="width: 20rem;" data-bs-toggle="modal" data-bs-target="#${project.id}-modal">
           <img src="${project.thumbnail}" class="card-img-top w-100" alt="..." style="height: 10rem;">
           <div class="card-body">
             <h5 class="card-title">${project.title}</h5>
             <p class="card-text">${project.summary}</p>
             <div id="${project.id}-skills" class="d-inline-flex flex-wrap"></div>
+          </div>
+        </div>
+
+        <!-- Project Modal -->
+        <div class="modal fade" id="${project.id}-modal" tabindex="-1" aria-labelledby="${project.id}-modal-label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="${project.id}-modal-label">${project.title}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ${project.summary}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
